@@ -1,0 +1,52 @@
+{
+  "projets": [
+    {
+      "id": 1,
+      "nom": "Interno",
+      "image": "assets/projets/toile/Interno.png",
+      "lien": "https://samay4207.github.io/Interno-Samuel-AYADI/"
+    },
+    {
+      "id": 2,
+      "nom": "Ti Chef",
+      "image": "assets/projets/toile/TiChef.png",
+      "lien": "https://samay4207.github.io/TiChef-Samuel-AYADI/"
+    },
+    {
+      "id": 3,
+      "nom": "Fake Store",
+      "image": "assets/projets/toile/FakeShop.png",
+      "lien": "https://samay4207.github.io/Fake-Store-Samuel-AYADI/"
+    },
+    {
+      "id": 4,
+      "nom": "Monochrome",
+      "image": "assets/projets/toile/Monochrome.png",
+      "lien": "https://samay4207.github.io/Monochrome-Samuel-AYADI/#La%20communaut%C3%A9"
+    },
+    {
+      "id": 5,
+      "nom": "MTN",
+      "image": "assets/projets/toile/MTN.png",
+      "lien": "https://la-toile-emlyon.github.io/mntn-website-SamAY4207/"
+    },
+    {
+      "id": 6,
+      "nom": "Clara Lenoir - Photographe",
+      "image": "assets/projets/toile/ClaraLenoir.png",
+      "lien": "https://la-toile-emlyon.github.io/ste-assignment-html-css-s2-2026-SamAY4207/#ValAj"
+    },
+    {
+      "id": 7,
+      "nom": "MusicHalle",
+      "image": "assets/projets/toile/MusicHalle.png",
+      "lien": "https://samay4207.github.io/Boutique-d-instrument-de-Musique-Samuel-AYADI/#temoignages-sec"
+    },
+    {
+      "id": 8,
+      "nom": "CoQuartier",
+      "image": "assets/projets/toile/CoQuartier.png",
+      "lien": "https://la-toile-emlyon.github.io/p3-ste-2026-s2-Romain1804/"
+    }
+  ]
+}

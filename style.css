@@ -1,0 +1,578 @@
+/* import de la typo */
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Lobster&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* ------------------------------
+            RESET
+ ---------------------------------*/
+* {
+    margin: 0;
+    /* pas de marges par défaut */
+    padding: 0;
+    /* pas de padding par défaut */
+    box-sizing: border-box;
+    /* Ne change pas la taille de la boite si j'ajoute des paddings ou des broder. je garde le controle de ma boite.*/
+}
+
+/* ------------------------------
+            TEXTES
+ ---------------------------------*/
+
+.decoration-none {
+    text-decoration: none;
+    /* retirer la ligne sous le texte */
+}
+
+.list-type-none {
+    list-style-type: none;
+    /*retirer la puces des listes */
+}
+
+.bold {
+    font-weight: 800;
+    /* mettre en gras */
+}
+
+.text-center {
+    text-align: center;
+    /* centrer le texte */
+}
+
+.uppercase {
+    text-transform: uppercase;
+    /* mettre en majuscule */
+}
+
+
+/* ------------------------------
+            LARGEURS
+ ---------------------------------*/
+
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-48 {
+    width: 48%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+/* ------------------------------
+            FLEXBOX
+ ---------------------------------*/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.align-end {
+    align-items: end;
+}
+
+
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
+/* ------------------------------
+         MARGIN & PADDING 
+ ---------------------------------*/
+
+/* Margin */
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mt-64 {
+    margin-top: 64px;
+}
+
+.mb-64 {
+    margin-bottom: 64px;
+}
+
+.mt-128 {
+    margin-top: 128px;
+}
+
+.mb-128 {
+    margin-bottom: 128px;
+}
+
+/* padding */
+
+
+.pb-16 {
+    padding-bottom: 16px;
+}
+
+.pt-16 {
+    padding-top: 16px;
+}
+
+.pb-32 {
+    padding-bottom: 16px;
+}
+
+.pt-32 {
+    padding-top: 32px;
+}
+
+.pb-32 {
+    padding-bottom: 32px;
+}
+
+.pt-128 {
+    padding-top: 128px;
+}
+
+.pb-128 {
+    padding-bottom: 128px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+/* ------------------------------
+            CONTAINER
+ ---------------------------------*/
+
+.container-1000 {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-1200 {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-1400 {
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-1600 {
+    max-width: 1600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------
+            Polices
+ ---------------------------------*/
+
+a {
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: currentColor;
+
+}
+
+p {
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+ol {
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    list-style: none;
+
+}
+
+ul {
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    list-style: none;
+}
+
+li {
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: "Baumans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: "Baumans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+
+h4 {
+    font-family: "Baumans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+h5 {
+    font-family: "Baumans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+
+/* ------------------------------
+            Barres de progression
+ ---------------------------------*/
+
+.progress-bar {
+
+    color: #31087B;
+    background-color: #FFC23C;
+    border-radius: 5px;
+    border-color: #FEEBF8;
+    border-width: 3px;
+    border-style: solid;
+    padding: 16px;
+}
+
+
+
+
+/* ------------------------------
+            Backgrounds
+ ---------------------------------*/
+.bg-black {
+    background-color: #080411;
+}
+
+.bg-purple {
+    background-color: #31087B;
+}
+
+/* ------------------------------
+            Couleurs
+ ---------------------------------*/
+/* Palette de couleurs 
+Purple Haze : #4B3597
+
+Black : #080411
+
+Purple : #31087B
+
+Blanc : #FEEBF8
+
+Jaune : #FFC23C
+*/
+
+.black {
+    color: #080411;
+}
+
+.purple {
+    color: #31087B;
+}
+
+.blanc {
+    color: #FEEBF8;
+}
+
+.jaune {
+    color: #FFC23C;
+}
+
+.cardl-d1 {
+    background-color: #FFC23C;
+    border-radius: 15px 0 0 15px;
+    padding: 16px;
+    color: #31087B;
+    fit-content: true;
+}
+
+.cardr-d1 {
+    background-color: #31087B;
+    border-radius: 0 15px 15px 0;
+    padding: 16px;
+    color: #FFC23C;
+}
+
+.cardb-d1 {
+    background-color: #FEEBF8;
+    border-radius: 0px 0px 15px 15px;
+    padding: 16px;
+    color: #31087B;
+}
+
+.cardb-d2 {
+    background-color: #FFC23C;
+    border-radius: 0px 0px 15px 15px;
+    padding: 16px;
+    color: #080411;
+}
+
+.card-1 {
+    background-color: #FFC23C;
+    border-radius: 15px;
+    padding: 16px;
+    color: #31087B;
+}
+
+.card-2 {
+    background-color: #FEEBF8;
+    border-radius: 15px;
+    padding: 16px;
+    color: #31087B;
+}
+
+.card-3 {
+    background-color: #31087B;
+    border-radius: 15px;
+    padding: 16px;
+    color: #FFC23C;
+}
+
+
+
+
+
+.radius-15l {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.radius-15r {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.radius-15t {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.radius-15b {
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+
+/*POSITIONS*/
+header {
+    position: sticky;
+    top: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+
+section {
+    scroll-margin-top: 120px;
+}
+
+
+
+/*SWIPPER*/
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    background-color: #31087B;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------
+   Swiper theme overrides
+   Change navigation arrows and active pagination color to yellow (#FFC23C)
+---------------------------------*/
+.mySwiper {
+    --swiper-navigation-color: #FFC23C;
+    --swiper-pagination-color: #FFC23C;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #FFC23C;
+    opacity: 1;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #FFC23C;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255,194,60,0.35);
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FFC23C;
+    opacity: 1;
+    box-shadow: 0 0 0 4px rgba(255,194,60,0.12);
+}
