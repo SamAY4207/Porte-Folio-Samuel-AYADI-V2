@@ -570,6 +570,18 @@ section {
 }
 
 
+.top-10-1{
+    top: -16px;
+    z-index: 2;
+    position: relative;
+}
+
+.top-10-2{
+    top: -16px;
+    z-index: 3;
+    position: relative;
+}
+
 
 /*SWIPPER*/
 html,
