@@ -374,10 +374,22 @@ h5 {
 
 .progress-bar {
 
+    /* Tu appliques ce clip-path à 6 points */
+    clip-path: polygon(
+    0% 0%, 
+    calc(100% - 20px) 0%, 
+    100% 50%, 
+    calc(100% - 20px) 100%, 
+    0% 100
+);
+
+    /* Pour que les blocs s'emboîtent au millimètre près sans espace noir */
+    margin-left: -20px; 
+
+    border: none;
     color: #31087B;
     background-color: #FFC23C;
     border-radius: 5px;
-    border-color: #FEEBF8;
     border-width: 3px;
     border-style: solid;
     padding: 16px;
