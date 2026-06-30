@@ -509,11 +509,11 @@ Jaune : #FFC23C
     border-radius: 5px;
     padding: 16px;
     clip-path: polygon(
-    calc(100% - 20px) 0%,
+    calc(100% - 32px) 0%,
     100% 50%,
-    calc(100% - 20px) 100%,
+    calc(100% - 32px) 100%,
     0% 100%,
-    20px 50%,
+    32px 50%,
     0% 0%
 );
 
@@ -525,11 +525,11 @@ Jaune : #FFC23C
     border-radius: 5px;
     padding: 16px;
     clip-path: polygon(
-    calc(100% - 20px) 0%,
+    calc(100% - 32px) 0%,
     100% 50%,
-    calc(100% - 20px) 100%,
+    calc(100% - 32px) 100%,
     0% 100%,                
-    20px 50%,               
+    32px 50%,               
     0% 0%
 );
 }
