@@ -255,6 +255,15 @@
     padding-bottom: 32px;
 }
 
+.pt-64 {
+    padding-top: 64px;
+}
+
+.pb-64 {
+    padding-bottom: 64px;
+}
+
+
 .pt-128 {
     padding-top: 128px;
 }
@@ -321,7 +330,7 @@
 a {
     font-family: "Mitr", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
@@ -332,7 +341,7 @@ a {
 p {
     font-family: "Mitr", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 20px;
 
@@ -341,7 +350,7 @@ p {
 ol {
     font-family: "Mitr", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 20px;
     list-style: none;
@@ -351,7 +360,7 @@ ol {
 ul {
     font-family: "Mitr", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 20px;
     list-style: none;
@@ -360,7 +369,7 @@ ul {
 li {
     font-family: "Mitr", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 20px;
     margin-bottom: 8px;
@@ -483,23 +492,40 @@ Jaune : #FFC23C
 }
 
 .card-3 {
-    background-color: #31087B;
+    background-color: #6419F0;
     border-radius: 15px;
     padding: 16px;
-    color: #FFC23C;
+    color: #FEEBF8;
 }
+.card-3:hover{
+    transform: translateY(10px);
+    box-shadow: 0 16px 32px rgba(228, 176, 222, 0.788);
+}
+
+.card-4 {
+    background-color: #FEEBF8;
+    border-radius: 15px;
+    padding: 16px;
+    color: #6419F0;
+}
+
+.card-4:hover{
+    transform: translateY(10px);
+    box-shadow: 0 16px 32px rgba(133, 3, 255, 0.788);
+}
+
 
 .btn-1 {
     background-color: #6419F0;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 6px 12px;
     color: #FFC23C;
 }
 
 .btn-2 {
     background-color: #FFC23C;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 6px 12px;
     color: #6419F0;
 }
 
@@ -534,6 +560,9 @@ Jaune : #FFC23C
 );
 }
 
+.radius-15 {
+    border-radius: 15px;
+}
 
 .radius-15l {
     border-radius: 15px 0px 0px 15px;
@@ -588,6 +617,11 @@ section {
     position: relative;
 }
 
+.top-32{
+    margin-top: -40px;
+    z-index: 4;
+    position: relative;
+}
 
 .pl-24{
     padding-left: 24px;

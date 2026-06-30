@@ -20,11 +20,11 @@ function remplirSwiper(projets) {
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
     slide.innerHTML = `
-      <div class="flex-column justify-center align-center border-radius-15 p-16 bg-purple">
+      <div class="flex-column justify-center align-center p-16 bg-purple">
         <h2 class="w-100 text-center mb-16 jaune">${projet.nom}</h2>
         <h5 class="w-100 text-center mb-16 blanc">Languages utilisés : ${projet.techno}</h5>
-        <img src="${projet.image}" alt="${projet.nom}" class="w-100 radius-15t mb-16" style="cursor: pointer;" onclick="window.open('${projet.lien}', '_blank')">
-        <a href="${projet.lien}" target="_blank" class="text-center btn-2"><h4>Voir le projet ↗</h4></a>
+        <img src="${projet.image}" alt="${projet.nom}" class="w-100 radius-15 mb-16" style="cursor: pointer;" onclick="window.open('${projet.lien}', '_blank')">
+        <a href="${projet.lien}" target="_blank" class="text-center btn-2 top-32"><h4>Voir le projet</h4></a>
       </div>
     `;
     swiperWrapper.appendChild(slide);
@@ -57,3 +57,20 @@ function initialiserSwiper() {
 // Charger les projets au chargement de la page
 document.addEventListener('DOMContentLoaded', chargerProjets);
 
+const app = TubesCursor(document.getElementById('canvas'), {
+  tubes: {
+    // Array of base colors for the tube material
+    colors: ["#f967fb", "#53bc28", "#6958d5"], 
+    lights: {
+      // Brightness of the glow (higher = more bloom)
+      intensity: 200, 
+      // Colors of the light sources casting onto the tubes
+      colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
+    }
+  }
+})
+
+myButton.addEventListener('click', () => {
+  // Generate 3 random colors for tubes
+  app.tubes.setColors(randomColors(3));
+});
