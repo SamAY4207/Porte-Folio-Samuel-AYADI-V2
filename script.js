@@ -12,7 +12,11 @@ async function chargerProjets() {
 // Remplir le swiper avec les projets
 function remplirSwiper(projets) {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
-  
+
+  if (!swiperWrapper) {
+    return;
+  }
+
   // Vider les slides par défaut
   swiperWrapper.innerHTML = '';
 
@@ -23,8 +27,8 @@ function remplirSwiper(projets) {
       <div class="flex-column justify-center align-center p-16 bg-purple">
         <h2 class="w-100 text-center mb-16 jaune">${projet.nom}</h2>
         <h5 class="w-100 text-center mb-16 blanc">Languages utilisés : ${projet.techno}</h5>
-        <img src="${projet.image}" alt="${projet.nom}" class="w-100 radius-15 mb-16" style="cursor: pointer;" onclick="window.open('${projet.lien}', '_blank')">
-        <a href="${projet.lien}" target="_blank" class="text-center btn-2 top-40"><h4>Voir le projet</h4></a>
+        <img src="${projet.image}" alt="${projet.nom}" class="w-100 radius-15 mb-16 pic" style="cursor: pointer;" onclick="window.open('${projet.lien}', '_blank')">
+        <a href="${projet.lien}" target="_blank" class="text-center btn-3 top-40"><h4>Voir le projet</h4></a>
       </div>
     `;
     swiperWrapper.appendChild(slide);
@@ -36,41 +40,68 @@ function remplirSwiper(projets) {
 
 // Initialiser le Swiper
 function initialiserSwiper() {
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-  });
+  if (window.Swiper) {
+    new Swiper('.mySwiper', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  }
 }
 
-// Charger les projets au chargement de la page
-document.addEventListener('DOMContentLoaded', chargerProjets);
+function initialiserFond() {
+  const container = document.querySelector('.triangle-container');
+  const glow = document.querySelector('#glow');
 
-const app = TubesCursor(document.getElementById('canvas'), {
-  tubes: {
-    // Array of base colors for the tube material
-    colors: ["#f967fb", "#53bc28", "#6958d5"], 
-    lights: {
-      // Brightness of the glow (higher = more bloom)
-      intensity: 200, 
-      // Colors of the light sources casting onto the tubes
-      colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = '';
+
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const triangleBase = 48;
+  const columns = Math.ceil(width / (triangleBase * 2)) + 1;
+  const rows = Math.ceil(height / (triangleBase * 1.733)) + 2;
+
+  container.style.setProperty('--columns', columns);
+
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < columns; x++) {
+      const triangleSet = document.createElement('div');
+      triangleSet.className = 'triangle-set';
+
+      if (y % 2 === 0) {
+        triangleSet.classList.add('triangle-set--offset');
+      }
+
+      container.appendChild(triangleSet);
     }
   }
-})
 
-myButton.addEventListener('click', () => {
-  // Generate 3 random colors for tubes
-  app.tubes.setColors(randomColors(3));
+  if (glow) {
+    window.addEventListener('mousemove', (event) => {
+      glow.style.top = `${event.clientY}px`;
+      glow.style.left = `${event.clientX}px`;
+    });
+  }
+}
+
+window.addEventListener('resize', initialiserFond);
+
+document.addEventListener('DOMContentLoaded', () => {
+  chargerProjets();
+  initialiserFond();
 });

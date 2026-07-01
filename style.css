@@ -514,6 +514,25 @@ Jaune : #FFC23C
     box-shadow: 0 16px 32px rgba(133, 3, 255, 0.788);
 }
 
+.a-nav{
+    color: #FEEBF8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.a-nav:hover{
+    color: #FFC23C;
+}
+
+.a-nav i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .btn-1 {
     background-color: #6419F0;
@@ -522,11 +541,43 @@ Jaune : #FFC23C
     color: #FFC23C;
 }
 
+.btn-1:hover{
+    transform: translateX(10px);
+    box-shadow: 0 0px 32px rgba(35, 0, 65, 0.788);
+}
+
 .btn-2 {
     background-color: #FFC23C;
     border-radius: 8px;
     padding: 6px 12px;
     color: #6419F0;
+}
+*
+.btn-2:hover{
+    transform: translateX(10px);
+    box-shadow: 0 8px 32px rgba(35, 0, 65, 0.788);
+}
+
+.btn-3 {
+    background-color: #FFC23C;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #6419F0;
+}
+*
+.btn-3:hover{
+    transform: translateX(0px);
+    box-shadow: 0 8px 32px rgba(35, 0, 65, 0.788);
+}
+
+
+.pic {
+    border-radius: 15px;
+}
+*
+.pic:hover{
+    
+    box-shadow: 0 8px 32px rgba(35, 0, 65, 0.788);
 }
 
 .fleche-1 {
@@ -688,4 +739,114 @@ body {
     background: #FFC23C;
     opacity: 1;
     box-shadow: 0 0 0 4px rgba(255, 194, 60, 0.12);
+}
+
+/* ------------------------------
+   Fond animé global
+---------------------------------*/
+@property --glow-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #6419F0;
+}
+
+:root {
+    --gap: 0.125rem;
+    --triangle-base: 3rem;
+    --triangle-base-height: calc(1.733 * var(--triangle-base));
+    --triangle-width: calc(var(--triangle-base) - var(--gap));
+    --triangle-height: calc(var(--triangle-base-height) - var(--gap));
+}
+
+html,
+body {
+    background: #080411;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.page-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: #080411;
+}
+
+.page-background__glow {
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background: radial-gradient(circle closest-side, var(--glow-color), transparent);
+    animation: glow-animation 5.2s ease infinite alternate;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes glow-animation {
+    from {
+        --glow-color: #6419F0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        --glow-color: #AE097A;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+.triangle-container {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), calc(var(--triangle-base) * 2 + var(--gap)));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.triangle-set {
+    display: inline-block;
+    position: relative;
+    width: calc(var(--triangle-base) * 2 + var(--gap));
+    height: var(--triangle-base-height);
+}
+
+.triangle-set--offset {
+    transform: translateX(calc(-1 * var(--triangle-base) - 0.5 * var(--gap)));
+}
+
+.triangle-set::before,
+.triangle-set::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: var(--gap);
+    border-right: var(--triangle-width) solid transparent;
+    border-left: var(--triangle-width) solid transparent;
+}
+
+.triangle-set::before {
+    left: calc(-1 * var(--triangle-base));
+    border-bottom: var(--triangle-height) solid #080411;
+}
+
+.triangle-set::after {
+    right: calc(var(--gap) * 2.5);
+    border-top: var(--triangle-height) solid #080411;
+}
+
+.page-content {
+    position: relative;
+    z-index: 1;
 }
